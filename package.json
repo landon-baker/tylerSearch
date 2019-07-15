@@ -7,7 +7,9 @@
     "test": "jest",
     "start": "webpack -d --watch & live-server --port=3030 --watch=dist --open=dist",
     "start-oh": "webpack -d --watch",
-    "server": "nodemon ./server/server.js"
+    "server": "nodemon ./server/server.js",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "express": "^4.17.0",
     "mongoose": "^5.5.14",
     "mysql": "^2.17.1",
+    "pm2": "^3.5.1",
     "react": "^16.8.6",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.8.6"
